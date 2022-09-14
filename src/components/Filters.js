@@ -46,7 +46,7 @@ function Filters() {
       case 'igual a':
         return Number(filter[curr.column]) === Number(curr.value);
       default:
-        return numericFilters;
+        return acc;
       }
     }), filteredNames);
     setPlanets(filterNumbers);
@@ -122,6 +122,7 @@ function Filters() {
               {`${filter.column} ${filter.comparison} ${filter.value}`}
               {' '}
               <button
+                data-testid="remove-btn"
                 onClick={ () => handleRemove(filter) }
                 type="button"
               >
