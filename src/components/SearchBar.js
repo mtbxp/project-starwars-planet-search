@@ -8,7 +8,7 @@ function SearchBar() {
     setFilterByName(target.value);
   };
   return (
-    <div>
+    <div className="hero">
       <h2>
         Pesquisar:
         {' '}
