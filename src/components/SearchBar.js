@@ -1,20 +1,12 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import Context from '../context/Context';
 
 function SearchBar() {
-  const { filterByName, setFilterByName, filterPlanets,
-    setPlanets } = useContext(Context);
+  const { filterByName, setFilterByName } = useContext(Context);
 
-  const handleSearch = ({ target }) => {
+  const handleChange = ({ target }) => {
     setFilterByName(target.value);
   };
-
-  useEffect(() => {
-    const filteredPlanets = filterPlanets
-      .filter((planet) => planet.name.toLowerCase().includes(filterByName.toLowerCase()));
-    setPlanets(filteredPlanets);
-  }, [filterByName]);
-
   return (
     <div>
       <h2>
@@ -25,7 +17,7 @@ function SearchBar() {
           type="text"
           placeholder="Planeta"
           value={ filterByName }
-          onChange={ handleSearch }
+          onChange={ handleChange }
         />
       </h2>
     </div>
