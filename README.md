@@ -30,24 +30,30 @@ Nesse projeto eu tinha como demanda:
 * RTL (React-testing-library);
 * React Hooks;
 
-## Execute localmente:
 
-Clone o projeto
+## Executando a aplicação:
 
-  -- git clone git@github.com:mtbxp/starwars-planet-search.git
+### 1. Clone o repositório
+```
+git clone git@github.com:mtbxp/starwars-planet-search.git
+```
 
-Va para o diretorio do projeto
+  * Entre na pasta do repositório que você acabou de clonar:
+```
+cd starwars-planets-search
+```
 
-  -- cd starwars-planets-search
+### 2. Instale as dependências:
+```
+npm install
+```
 
-Instale as dependencias
+### 3. Executar o comando para abrir a visualização no navegador
+```
+npm start
+```
 
-  -- npm install
-  
-Inicie a aplicação com:
-
-  -- npm start
-  
-Execute os testes da aplicação com:
-
-  -- npm test
+### 4. Execute os testes da aplicação
+```
+npm test
+```
